@@ -1,0 +1,65 @@
+<div class="row">
+  <div class="col-md-6">
+    <img src="/assets/images/logo.png">
+    <p class="text-primary lead">
+    DynJS is an ECMAScript runtime for the JVM. 
+    </p>
+    <hr>
+    <div>
+      <h4>Source</h4>
+      <img src="/assets/images/octocat50x50.png" class="pull-left">
+      <p>
+      DynJS is an open source project. The <a href="http://github.com/dynjs/dynjs">source code</a>
+      is hosted on GitHub. Contributions are welcome.
+      GitHub is also the location to 
+      <a href="http://github.com/dynjs/dynjs/issues">submit bugs and issues</a>
+      if you run into them. Don't be shy!
+      </p>
+    </div>
+    <hr>
+    <div>
+      <h4>Continuous Integration</h4>
+      <img src="/assets/images/cloudbees101x50.png" class="pull-left">
+      <p>
+      Our <a href="http://dynjs.ci.cloudbees.com">continuous integration server</a>
+      is hosted by <a href="http://cloudbees.com">CloudBees</a>, a nice
+      cloud-hosted version of the Jenkins tooling to keep us sane. We also use
+      <a href="https://travis-ci.org/dynjs/dynjs">Travis-CI</a>.
+      </p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h3>Run Javascript on the command line</h3>
+    <pre class="pre-scrollable">
+    $ cat my_app.js
+    print("Hi! What's your name?");
+    var sayHello = function(name) {
+        print("Hello " + name);
+    }
+
+    System = java.lang.System;
+    scanner = new java.util.Scanner(System.in);
+    name = scanner.nextLine();
+    sayHello(name);
+
+    $ dynjs my_app.js
+    Hi! What's your name?
+    Douglas
+    Hello Douglas
+    ^D
+    </pre>
+    <p>
+    <h3>Interactive REPL development</h3>
+    <p>
+    <pre class="pre-scrollable">
+    $ dynjs --console
+    DynJS console.
+    Type exit and press ENTER to leave.
+    dynjs> var x = {}
+    dynjs> x.name = "Douglas"
+    dynjs> var speak = function(name) { print(name); }
+    dynjs> speak(x.name)
+    Douglas
+    </pre>
+  </div>
+</div>
