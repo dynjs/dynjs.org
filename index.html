@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <title>DynJS | An Ecmascript Runtime for the JVM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link media="screen" rel="stylesheet" href="/lib/css/bootstrap.min.css">
+    <link media="screen" rel="stylesheet" href="/lib/css/gh-fork-ribbon.css">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!--[if IE]>
+      <link rel="stylesheet" href="gh-fork-ribbon.ie.css" />
+    <![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/lib/js/html5shiv.js"></script>
+      <script src="/lib/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Fixed but responsive top navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">DynJS</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/getting-started.html">Getting Started</a></li>
+            <li><a href="/downloads.html">Downloads</a></li>
+            <li><a href="/community.html">Community</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container main-container">
+        <div class="row">
+  <div class="col-md-6">
+    <img src="/assets/images/logo.png">
+    <p class="text-primary lead">
+    DynJS is an ECMAScript runtime for the JVM. 
+    </p>
+    <hr>
+    <div>
+      <h4>Source</h4>
+      <img src="/assets/images/octocat50x50.png" class="pull-left">
+      <p>
+      DynJS is an open source project. The <a href="http://github.com/dynjs/dynjs">source code</a>
+      is hosted on GitHub. Contributions are welcome.
+      GitHub is also the location to 
+      <a href="http://github.com/dynjs/dynjs/issues">submit bugs and issues</a>
+      if you run into them. Don't be shy!
+      </p>
+    </div>
+    <hr>
+    <div>
+      <h4>Continuous Integration</h4>
+      <img src="/assets/images/cloudbees101x50.png" class="pull-left">
+      <p>
+      Our <a href="http://projectodd.ci.cloudbees.com/view/DynJS">continuous integration server</a>
+      is hosted by <a href="http://cloudbees.com">CloudBees</a>, a nice
+      cloud-hosted version of the Jenkins tooling to keep us sane. We also use
+      <a href="https://travis-ci.org/dynjs/dynjs">Travis-CI</a>.
+      </p>
+    </div>
+    <hr>
+  </div>
+  <div class="col-md-6">
+    <div>
+      <h3>Download</h3>
+      <pre class="pre-scrollable">
+  $ wget -O dynjs.zip -q http://goo.gl/KBeLRx 
+  $ unzip dynjs.zip</pre>
+    </div>
+    <hr>
+    <div>
+      <h3>Run Javascript on the command line</h3>
+      <pre class="pre-scrollable">
+$ cat my_app.js
+print("Hi! What's your name?");
+var sayHello = function(name) {
+    print("Hello " + name);
+}
+
+System = java.lang.System;
+scanner = new java.util.Scanner(System.in);
+name = scanner.nextLine();
+sayHello(name);
+
+$ dynjs my_app.js
+Hi! What's your name?
+Douglas
+Hello Douglas
+^D</pre>
+    </div>
+    <hr>
+    <div>
+      <p>
+      <h3>Interactive REPL development</h3>
+      <p>
+      <pre class="pre-scrollable">
+$ dynjs --console
+DynJS console.
+Type exit and press ENTER to leave.
+dynjs> var x = {}
+dynjs> x.name = "Douglas"
+dynjs> var speak = function(name) { print(name); }
+dynjs> speak(x.name)
+Douglas </pre>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <div id="footer">
+        <div class="container">
+          <p class="text-muted credit">
+            <a href="https://travis-ci.org/dynjs/dynjs"><img src="https://travis-ci.org/dynjs/dynjs.png?branch=master"></a>
+            &copy; dynjs.org 2011-2013
+          </p>
+        </div>
+        <div class="github-fork-ribbon-wrapper right-bottom">
+          <div class="github-fork-ribbon">
+            <a href="https://github.com/dynjs/dynjs">Fork me on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/lib/js/jquery.min.js"></script>
+    <script src="/lib/js/bootstrap.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
