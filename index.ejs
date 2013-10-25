@@ -27,42 +27,50 @@
       <a href="https://travis-ci.org/dynjs/dynjs">Travis-CI</a>.
       </p>
     </div>
+    <hr>
   </div>
   <div class="col-md-6">
-    <h3>Download</h3>
-    <pre class="pre-scrollable">
-    $ wget -O dynjs.zip -q http://goo.gl/KBeLRx 
-    $ unzip dynjs.zip</pre>
+    <div>
+      <h3>Download</h3>
+      <pre class="pre-scrollable">
+  $ wget -O dynjs.zip -q http://goo.gl/KBeLRx 
+  $ unzip dynjs.zip</pre>
+    </div>
+    <hr>
+    <div>
+      <h3>Run Javascript on the command line</h3>
+      <pre class="pre-scrollable">
+$ cat my_app.js
+print("Hi! What's your name?");
+var sayHello = function(name) {
+    print("Hello " + name);
+}
 
-    <h3>Run Javascript on the command line</h3>
-    <pre class="pre-scrollable">
-    $ cat my_app.js
-    print("Hi! What's your name?");
-    var sayHello = function(name) {
-        print("Hello " + name);
-    }
+System = java.lang.System;
+scanner = new java.util.Scanner(System.in);
+name = scanner.nextLine();
+sayHello(name);
 
-    System = java.lang.System;
-    scanner = new java.util.Scanner(System.in);
-    name = scanner.nextLine();
-    sayHello(name);
-
-    $ dynjs my_app.js
-    Hi! What's your name?
-    Douglas
-    Hello Douglas
-    ^D</pre>
-    <p>
-    <h3>Interactive REPL development</h3>
-    <p>
-    <pre class="pre-scrollable">
-    $ dynjs --console
-    DynJS console.
-    Type exit and press ENTER to leave.
-    dynjs> var x = {}
-    dynjs> x.name = "Douglas"
-    dynjs> var speak = function(name) { print(name); }
-    dynjs> speak(x.name)
-    Douglas </pre>
+$ dynjs my_app.js
+Hi! What's your name?
+Douglas
+Hello Douglas
+^D</pre>
+    </div>
+    <hr>
+    <div>
+      <p>
+      <h3>Interactive REPL development</h3>
+      <p>
+      <pre class="pre-scrollable">
+$ dynjs --console
+DynJS console.
+Type exit and press ENTER to leave.
+dynjs> var x = {}
+dynjs> x.name = "Douglas"
+dynjs> var speak = function(name) { print(name); }
+dynjs> speak(x.name)
+Douglas </pre>
+    </div>
   </div>
 </div>
