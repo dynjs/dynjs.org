@@ -21,7 +21,7 @@
       <h4>Continuous Integration</h4>
       <img src="/assets/images/cloudbees101x50.png" class="pull-left">
       <p>
-      Our <a href="http://dynjs.ci.cloudbees.com">continuous integration server</a>
+      Our <a href="http://projectodd.ci.cloudbees.com/view/DynJS">continuous integration server</a>
       is hosted by <a href="http://cloudbees.com">CloudBees</a>, a nice
       cloud-hosted version of the Jenkins tooling to keep us sane. We also use
       <a href="https://travis-ci.org/dynjs/dynjs">Travis-CI</a>.
@@ -29,6 +29,11 @@
     </div>
   </div>
   <div class="col-md-6">
+    <h3>Download</h3>
+    <pre class="pre-scrollable">
+    $ wget -O dynjs.zip -q http://goo.gl/KBeLRx 
+    $ unzip dynjs.zip</pre>
+
     <h3>Run Javascript on the command line</h3>
     <pre class="pre-scrollable">
     $ cat my_app.js
@@ -46,8 +51,7 @@
     Hi! What's your name?
     Douglas
     Hello Douglas
-    ^D
-    </pre>
+    ^D</pre>
     <p>
     <h3>Interactive REPL development</h3>
     <p>
@@ -59,7 +63,6 @@
     dynjs> x.name = "Douglas"
     dynjs> var speak = function(name) { print(name); }
     dynjs> speak(x.name)
-    Douglas
-    </pre>
+    Douglas </pre>
   </div>
 </div>
