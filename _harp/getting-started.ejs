@@ -1,1 +1,72 @@
-<h2>Getting Started</h2>
+<h2>Usage</h2>
+<p>
+To use DynJS, the first thing you'll want to do is download the DynJS binary.
+The 0.1.1 release did not include a runnable command line binary, so you'll
+need to gram the latest snapshot from Sonatype.
+
+<a href="https://oss.sonatype.org/content/repositories/snapshots/org/dynjs/dynjs/0.1.2-SNAPSHOT/">Browse
+the snapshots</a> and scroll to the bottom of the page. You want the most
+recent zip file available. The file name will be something like <code>dynjs-0.1.2-20131101.173025-49.zip</code>.
+Download this file and unzip it. This will create a <code>./bin/dynjs</code>
+</p>
+
+<a class="btn btn-primary btn-lg" role="button" href="https://oss.sonatype.org/content/repositories/snapshots/org/dynjs/dynjs/0.1.2-SNAPSHOT/">Download Now!</a>
+
+<h3>Command Line</h3>
+<p>
+DynJS comes with a binary that you can use to execute Javascript files on the
+command line.
+</p>
+
+<pre><code>$ ./bin/dynjs --help
+Usage: dynjs [--console |--debug | --help | --version |FILE]
+Starts the dynjs console or executes FILENAME depending the parameters
+
+ FILE      : File to be executed by dynjs
+ --console : Opens a REPL console to test small expressions.
+ --debug   : Run REPL in debug mode.
+ --help    : Shows current screen. Running without parameters also shows this.
+ --version : Shows current dynjs version.
+</code></pre>
+
+<h3>Embedding</h3>
+<p>
+DynJS can be embedded into an existing Java application to provide JavaScript
+scripting abilities from your Java projects. First, you'll need to add the
+dependency to your build. In maven:
+</p>
+<pre><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.dynjs&lt/groupId&gt;
+  &lt;artifactId&gt;dynjs&lt/artifactId&gt;
+  &lt;version&gt;version.dynjs}&lt/version&gt;
+  &lt;scope&gt;compile&lt/scope&gt;
+&lt;/dependency</code></pre>
+
+<p>
+You can provide the embedded runtime with strings or file paths to execute
+JavaScript.
+</p>
+
+<pre><code>import org.dynjs.Config;
+import org.dynjs.exception.ThrowException;
+import org.dynjs.runtime.*;
+
+public class ScriptRunner {
+  DynJS dynjs;
+  Config config;
+
+  public ScriptRunner() {
+    config = new Config();
+    dynjs  = new DynJS(config);
+  }
+
+  public Object runScript(String fileName) {
+    Runner runner = dynjs.newRunner();
+    return runner.withSource(new File(fileName)).execute();
+  }
+
+  public Object eval(String code) {
+    return dynjs.evaluate(code);
+  }
+
+}</pre></code>

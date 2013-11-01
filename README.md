@@ -9,10 +9,3 @@ To compile the site to static files for deployment
 
     $ harp compile ./
 
-To deploy to gh-pages (the staging site).
-
-    $ git checkout gh-pages
-    $ harp compile _harp ./
-    $ git commit -a -m "Compile site for staging"
-    $ git push origin gh-pages
-    $ git checkout master
