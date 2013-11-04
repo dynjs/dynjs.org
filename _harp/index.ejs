@@ -31,9 +31,20 @@
   </div>
   <div class="col-md-6">
     <div>
-      <h3>Download</h3>
-			<a class="btn btn-primary btn-lg" role="button" href="https://oss.sonatype.org/service/local/repositories/releases/content/org/dynjs/dynjs/0.2.0/dynjs-0.2.0.zip">Download v0.2.0 Now!</a>
-<pre><code>$ unzip dynjs-0.2.0.zip</code></pre>
+      <div class="well">
+        <p class="lead">Download now. It's easy to get started!</p>
+        <a class="btn btn-primary btn-lg" role="button" href="http://bit.ly/dynjs-020-download">Download v0.2.0</a>
+      </div>
+<pre><code>$ curl -q http://bit.ly/dynjs-020-download
+$ unzip dynjs-0.2.0.zip
+$ ./bin/dynjs --console
+DynJS console.
+Type exit and press ENTER to leave.
+dynjs> var x = {}
+dynjs> x.name = "Douglas"
+dynjs> var speak = function(name) { print(name); }
+dynjs> speak(x.name)
+Douglas</code></pre>
     </div>
     <hr>
     <div>
@@ -54,20 +65,6 @@ Hi! What's your name?
 Douglas
 Hello Douglas
 ^D</code></pre>
-    </div>
-    <hr>
-    <div>
-      <p>
-      <h3>Interactive REPL development</h3>
-      <p>
-<pre><code>$ dynjs --console
-DynJS console.
-Type exit and press ENTER to leave.
-dynjs> var x = {}
-dynjs> x.name = "Douglas"
-dynjs> var speak = function(name) { print(name); }
-dynjs> speak(x.name)
-Douglas</code></pre>
     </div>
   </div>
 </div>
