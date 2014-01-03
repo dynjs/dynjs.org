@@ -1,0 +1,18 @@
+<h2>DynJS 0.2.1 Release Notes</h2>
+<p>
+There are a number of changes in DynJS 0.2.1, most notably in the area of Java
+type integration, and Windows compatibility.
+</p>
+
+
+<h3>Resolved Issues</h3>
+<ul>
+  <% var issues = public.releases.v0_2_1.data.issues; %>
+  <% for (var issue in issues) { %>
+    <li>
+    <a href="<%= issues[issue].url %>">(#<%= issues[issue].number %>)</a>
+      <%= issues[issue].title %>
+    </li>
+  <% } %>
+</ul>
+

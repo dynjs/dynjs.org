@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "release": {
+      "version": "0.2.1",
+      "uri": "/releases/0_2_1"
+    }
+  }
+}

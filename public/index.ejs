@@ -6,6 +6,17 @@
     </p>
     <hr>
     <div>
+      <h4>Releases</h4>
+      <p>
+      The most current release version of DynJS is <%= release.version %>.
+      Read the <a href="/releases/v0_2_1">release notes</a>.
+      </p>
+      <p>
+      The current developer release is <a href="https://oss.sonatype.org/content/repositories/snapshots/org/dynjs/dynjs/0.2.2-SNAPSHOT/">0.2.2-SNAPSHOT</a>. 
+      </p>
+    </div>
+    <hr>
+    <div>
       <h4>Source</h4>
       <img src="/assets/images/octocat50x50.png" class="pull-left" alt="octocat">
       <p>
@@ -27,23 +38,16 @@
       <a href="https://travis-ci.org/dynjs/dynjs">Travis-CI</a>.
       </p>
     </div>
-    <div>
-      <h4>Cutting Edge</h4>
-      <p>
-      The current developer release is <a href="https://oss.sonatype.org/content/repositories/snapshots/org/dynjs/dynjs/0.2.1-SNAPSHOT/dynjs-0.2.1-20131220.191220-16.zip">0.2.1-SNAPSHOT</a>. This contains several improvements over the 2.0 release, most notably in the area of Java integration.
-      </p>
-    </div>
     <hr>
   </div>
   <div class="col-md-6">
     <div>
       <div class="well">
         <p class="lead">Download now. It's easy to get started!</p>
-        <a class="btn btn-primary btn-lg" role="button" href="http://bit.ly/dynjs-020-download">Download v0.2.0</a>
+        <a class="btn btn-primary btn-lg" role="button" href="https://oss.sonatype.org/content/repositories/releases/org/dynjs/dynjs/0.2.1/dynjs-0.2.1.zip">Download v0.2.1</a>
       </div>
-<pre><code>$ wget -q -O dynjs-0.2.0.zip http://bit.ly/dynjs-020-download
-$ unzip dynjs-0.2.0.zip
-$ ./bin/dynjs --console
+      <h3>Experiment with the REPL</h3>
+<pre><code>$ ./bin/dynjs --console
 DynJS console.
 Type exit and press ENTER to leave.
 dynjs> var x = {}
@@ -54,7 +58,7 @@ Douglas</code></pre>
     </div>
     <hr>
     <div>
-      <h3>Run Javascript on the command line</h3>
+      <h3>Execute Javascript on the command line</h3>
 <pre><code>$ cat my_app.js
 print("Hi! What's your name?");
 var sayHello = function(name) {
