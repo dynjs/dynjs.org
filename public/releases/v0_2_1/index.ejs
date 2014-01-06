@@ -1,7 +1,13 @@
 <h2>DynJS 0.2.1 Release Notes</h2>
 <p>
 There are a number of changes in DynJS 0.2.1, most notably in the area of Java
-type integration, and Windows compatibility.
+type integration, and Windows compatibility. Thanks very much to
+<a href="https://github.com/bbrowning">@bbrowning</a> for his excellent
+work with the Java interoperability issues that had been reported.  Much gratitude 
+is extended to community contributors 
+<a href="https://github.com/t-beckmann">@t-beckmann</a> and 
+<a href="https://github.com/rektide">@rektide</a>
+for their pull requests.
 </p>
 
 
@@ -10,7 +16,7 @@ type integration, and Windows compatibility.
   <% var issues = public.releases.v0_2_1.data.issues; %>
   <% for (var issue in issues) { %>
     <li>
-    <a href="<%= issues[issue].url %>">(#<%= issues[issue].number %>)</a>
+    <a href="<%= issues[issue].html_url %>">(#<%= issues[issue].number %>)</a>
       <%= issues[issue].title %>
     </li>
   <% } %>
