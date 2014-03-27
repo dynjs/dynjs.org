@@ -1,0 +1,12 @@
+<h2>DynJS 0.2.2 Release Notes</h2>
+
+<h3>Resolved Issues</h3>
+<ul>
+  <% var issues = public.releases.v0_2_2._data.issues; %>
+  <% for (var issue in issues) { %>
+    <li>
+    <a href="<%= issues[issue].html_url %>">(#<%= issues[issue].number %>)</a>
+      <%= issues[issue].title %>
+    </li>
+  <% } %>
+</ul>

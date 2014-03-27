@@ -7,7 +7,7 @@ var FileSystem = require('fs');
 
 
 var milestone  = 1;     // Use the milestone number from github.com/dynjs/dynjs/issues/milestones
-var outputDir  = 'v0_2_1'; // The version number. Assumes a prefix of public/releases
+var outputDir  = 'v0_2_2'; // The version number. Assumes a prefix of public/releases
 
 var baseDir    = 'public/releases';
 var releaseDir = [baseDir, outputDir].join('/');
