@@ -1,0 +1,14 @@
+<h2>DynJS 0.3.0 Release Notes</h2>
+<p>
+The 0.3.0 release contains a ton of performance improvements, including a totally revamped rephract (v2.0.0 is out!) and the initial support for our new IR compiler!
+</p>
+<h3>Resolved Issues</h3>
+<ul>
+  <% var issues = public.releases.v0_3_0._data.issues; %>
+  <% for (var issue in issues) { %>
+    <li>
+    <a href="<%= issues[issue].html_url %>">(#<%= issues[issue].number %>)</a>
+      <%= issues[issue].title %>
+    </li>
+  <% } %>
+</ul>

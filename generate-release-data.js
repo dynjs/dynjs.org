@@ -6,8 +6,8 @@ var GitHub = require('github');
 var FileSystem = require('fs');
 
 
-var milestone  = 2;     // Use the milestone number from github.com/dynjs/dynjs/issues/milestones
-var outputDir  = 'v0_2_2'; // The version number. Assumes a prefix of public/releases
+var milestone  = 3;     // Use the milestone number from github.com/dynjs/dynjs/issues/milestones
+var outputDir  = 'v0_3_0'; // The version number. Assumes a prefix of public/releases
 
 var baseDir    = '_harp/public/releases';
 var releaseDir = [baseDir, outputDir].join('/');
