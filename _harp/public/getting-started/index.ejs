@@ -2,7 +2,7 @@
 <p>
 To use DynJS, the first thing you'll want to do is download the DynJS binary.
 </p>
-<a class="btn btn-primary btn-lg" role="button" href="https://oss.sonatype.org/service/local/repositories/releases/content/org/dynjs/dynjs/0.2.1/dynjs-0.2.1.zip">Download Now!</a>
+<a class="btn btn-primary btn-lg" role="button" href="https://oss.sonatype.org/service/local/repositories/releases/content/org/dynjs/dynjs/<%= release.version %>/dynjs-<%= release.version %>-dist.zip">Download Now!</a>
 <p>
 Download this file and unzip it. This will create a <code>./bin/dynjs</code>
 </p>
@@ -34,7 +34,7 @@ dependency to your build. In maven:
 <pre><code>&lt;dependency&gt;
   &lt;groupId&gt;org.dynjs&lt;/groupId&gt;
   &lt;artifactId&gt;dynjs&lt;/artifactId&gt;
-  &lt;version&gt;0.2.1&lt;/version&gt;
+  &lt;version&gt;<%= release.version %>&lt;/version&gt;
   &lt;scope&gt;compile&lt;/scope&gt;
 &lt;/dependency</code></pre>
 

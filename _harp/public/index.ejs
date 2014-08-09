@@ -12,7 +12,7 @@
       Read the <a href="<%= release.uri %>">release notes</a>.
       </p>
       <p>
-      The current developer release is <a href="https://oss.sonatype.org/content/repositories/snapshots/org/dynjs/dynjs/0.2.3-SNAPSHOT/">0.2.3-SNAPSHOT</a>.
+      The current developer release is <a href="https://oss.sonatype.org/content/repositories/snapshots/org/dynjs/dynjs/<%= development.version %>/"><%= development.version %></a>.
       </p>
     </div>
     <hr>
@@ -44,7 +44,7 @@
     <div>
       <div class="well">
         <p class="lead">Download now. It's easy to get started!</p>
-        <a class="btn btn-primary btn-lg" role="button" href="https://oss.sonatype.org/content/repositories/releases/org/dynjs/dynjs/0.2.2/dynjs-0.2.2.zip">Download v0.2.2</a>
+        <a class="btn btn-primary btn-lg" role="button" href="https://oss.sonatype.org/content/repositories/releases/org/dynjs/dynjs/<%= release.version %>/dynjs-<%= release.version %>-dist.zip">Download v<%= release.version %></a>
       </div>
       <h3>Experiment with the REPL</h3>
 <pre><code>$ ./bin/dynjs --console

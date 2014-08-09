@@ -1,8 +1,11 @@
 {
   "globals": {
     "release": {
-      "version": "0.2.2",
-      "uri": "/releases/v0_2_2"
+      "version": "0.3.0",
+      "uri": "/releases/v0_3_3"
+    },
+    "development": {
+      "version": "0.3.1-SNAPSHOT"
     }
   }
 }
