@@ -2,7 +2,7 @@
   "globals": {
     "release": {
       "version": "0.3.0",
-      "uri": "/releases/v0_3_3"
+      "uri": "/releases/v0_3_0"
     },
     "development": {
       "version": "0.3.1-SNAPSHOT"
